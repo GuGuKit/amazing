@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>惯导系统</title>
+<style type="text/css">
+body {
+/*  	margin: 0px;
+	padding: 0px; 
+ 	position:absolute; 
+ 	top:0;
+	bottom:0;  
+ 	background-color: gray;
+	text-align: center;  */
+	
+/* 	background-image: url("earth-005.jpg"); 
+
+	background-repeat: no-repeat;
+	background-size:1800px auto; */
+	background-color:#668599;
+	margin: 0px;
+	font-size: 25%;
+}
+.box{
+	margin: 0 auto;width:1200px;background-color: white;
+	/* position:absolute; left:50%;bottom: 0px;top:0px; margin-left: -600px; */
+}
+.head{
+	height:60px;
+	background-color: white;
+	/* text-align:center; */
+	/* vertical-align: center; */
+	margin: 0px;
+	padding:0px;
+}
+.menu{
+	height:50px;
+	background-color: #54439B;
+	color:white;
+	padding:0px;
+}
+.logo{
+	margin-left:80px;
+	margin-top:5px;
+	width:50px;
+	float: left;
+
+
+}	
+.title{
+	padding:0px;
+	margin-left:50px;
+	margin-top:10px;
+	height:10px;	
+	width:600px;
+	float:left;
+	font-size:8em;
+	font-weight: bold;
+	color: #2C61B1;	
+}
+.option{
+	color:white;
+	float:none;
+	margin-left:30px;
+	text-decoration: none; 
+	font-size:5em;
+	position:relative;
+	top:12px;
+}
+.options{
+/* 	position:absolute;
+	left:50%; */
+	width:8000px;
+	margin-left: 200px;
+/* 	margin-left:-400px; */
+}
+
+.clear{clear:both;}
+.param{
+	height:180px;
+
+	font-size: 4em;
+	
+}
+.left,.right{
+	float: left;
+	width:33.3%;
+	height: 180px;
+	/* text-align: center; */
+}
+.mid{
+	float: left;
+	width:33.3%;
+	height: 180px;
+	text-align: center; 
+}
+.left div{
+/* 	margin-left:60px;
+	margin-top:30px; */
+	margin-left:100px;
+	margin-top:23px;
+	color:#3352CC;
+	padding-left: 130px;
+}
+.right div{
+	margin-left:-100px;
+	margin-top:30px;
+	color:#3352CC;
+	padding-left: 110px;
+}
+.mid img{
+	width:170px;
+	margin-top: 10px;
+
+}
+
+hr{
+	height: 3px;
+	border:0;
+	background-color: red;
+	width:1000px;
+	margin-top:10px;
+}
+.footer{
+	height:40px;
+	width:100%;
+	background-color: #4876FF;
+	color:white;
+	font-size: 4em;
+	
+	
+	/* vertical-align: center; */
+}
+.footer p{
+
+
+	text-align: center;
+	line-height: 40px; 
+}
+/* .compass img{
+	width: 240px;
+	left: 50%;
+	margin-top:50px;
+	margin-left: 450px;
+} */
+/* 
+ 下面的设置是红线以下的格式
+ */
+.all-status{
+	width:100%;
+	height:250px;
+	margin-top: 20px;
+
+	
+}
+.status-left,.status-right{
+	float: left;
+	width:35%;
+	height: 250px;
+	/* text-align: center; */
+}
+.status-mid{
+	float: left;
+	width:30%;
+	height: 250px;
+	text-align: center; 
+}
+.pin{
+	margin-left:177px;
+	width:0;
+	height:0;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-top: 25px solid red;
+	
+}
+.status-mid img {
+	margin-top:3px;
+	width:220px;
+}
+.input-output,.system-status{
+	width:230px;
+	height: 250px;
+	border:2px solid gray;
+	border-radius:8px;
+	
+}
+.input-output{
+		margin-left:180px;
+}
+.title1,.title2 {
+	font-size:4em;
+	text-align: center;
+	color:#3352CC;
+	
+}
+.all-status hr {
+	width:220px;
+	background-color: gray;
+	height:2px;
+}
+.sys-msg p ,.input-msg p{
+	margin-left: 20px;
+	margin-top:10px;
+	color: green;
+	font-size:4em;
+}
+
+</style>
+
+</head>
+<body>
+	<div class="box">
+		<div class="head">
+			<img class="logo" alt="logo" src="logo.png">
+			<p class="title">
+				惯&nbsp;性&nbsp;导&nbsp;航&nbsp;系&nbsp;统&nbsp;HEU-407
+			</p>
+		</div>
+		<!-- 清除浮动 -->
+		<div class="clear"></div>
+		<div class="menu">
+			<div class="options">
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/control.html" style="color: #33CCCC">主控界面</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/init.html">初始化</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/io_set.html">输入/输出</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/network.html">网络设置</a>
+				<a class="option" href="#">密码设置</a>
+				<a class="option" href="#">数据下载</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="param">
+				<div class="left">
+					<div><b>航向:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="hangxiang">0.2332°</span></div>
+					<div><b>横摇:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="hengyao">1.8362°</span></div>
+					<div><b>纵摇:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="zongyao">-1.3994°</span></div>
+					<div><b>速度:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="sudu">5.89</span></div>
+				</div>
+				<div class="mid">
+					<img alt="logo" src="logo.png">
+				</div>
+				<div class="right">
+					<div><b>经度:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="jingdu">126.6753°</span></div>
+					<div><b>纬度:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="weidu">45.7588°</span></div>
+					<div><b>高度:&nbsp;&nbsp;&nbsp;&nbsp;</b><span id="gaodu">0.00</span></div>
+				</div>
+			</div>
+			<div>
+				<hr>
+			</div>
+
+			<div class="all-status">
+				<div class="status-left">
+					<div class="input-output">
+						<p class="title1">输入/输出状态</p>
+						<hr>
+						<div class="input-msg">
+							<p>输入状态:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>良好</span></p>
+							<p>输出状态:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>良好</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="status-mid">
+					<div class="pin"></div>
+					<img alt="compass" src="compass.png">
+				</div>
+				<div class="status-right">
+					<div class="system-status">
+						<p class="title2">系统状态</p>
+						<hr>
+						<div class="sys-msg">
+							<p>导航模式</p>
+							<p>粗对准:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>完成</span></p>
+							<p>精对准:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>完成</span></p>
+							
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+
+		</div>
+		<div class="footer">
+			<p>Copyright © 2016-2017 by 哈工程自动化407教研室</p>
+		</div>
+	</div>
+</body>
+</html>

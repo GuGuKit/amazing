@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+<style type="text/css">
+body {
+    margin:0;
+	/* background-color: #323B55;  */ 
+	background-color:#875EA2;  
+	
+	font-family: sans-serif;
+	
+	
+}
+input {
+	
+	border-radius: 10px;
+	border:1px solid #5e5ea2;
+	height: 32px;
+	width: 180px
+}
+.jiemian {
+	border:1px solid white;
+	border-radius:8px;
+	top:50%;
+	left:50%;
+	position:fixed;
+	margin-left:-150px;
+	margin-top:-150px;
+	width: 300px;
+	height: 300px;
+	background-color: white;
+}
+
+.userName{
+	//border:1px solid gray;
+	margin-left: 55px;
+	margin-top: 40px;
+}
+
+.passWord {
+
+	margin-left: 55px;
+	margin-top: 20px;
+}
+
+
+.submit {
+	/* display: inline-block; */
+	margin-left: 80px;
+	margin-top: 40px;
+	border:1px solid gray;
+ 	background:#445cbb;
+	padding: 0px;
+	width: 140px;
+	color: white;
+}
+.title{
+	height:20px;
+	margin-top: 10px;
+	margin-left: 10px;
+	color: #445cbb;
+
+}
+.head{
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-top:-260px;
+	margin-left:-240px;
+	width: 600px;
+	height: 80px;
+	background-color: #875EA2; 
+	
+}
+.image{
+	
+	float:left;
+	width: 100px;
+	height: 80px;
+/* 	background-image: url("logo.png");
+	background-repeat: no-repeat; */
+	
+	
+}
+.bigtitle{
+	//display: inline-block;
+	
+	color:white;
+	float:right;
+	width: 500px;
+	height: 80px;
+	
+}
+hr{
+	height:1px;border:none;border-top:2px solid #445cbb;
+}
+div{
+	margin: 0px;padding: 0px;
+}
+<script type="text/javascript">
+	var submit = document.getElementById('submit');
+	submit.onclick=function(){
+		window.location.href = 'file:///H:/eclipse_mars_workspace3/demo/WebContent/control.html';
+	}
+</script>
+</style>
+</head>
+<body>
+<div class="head">
+	<div class="image">
+		<img src="logo.png" width="80px">
+	</div>
+	<div class="bigtitle">
+		<h1>   惯性导航系统 HEU-407</h1>
+	</div>
+</div>
+
+	<div class="jiemian">
+		<div class="title">
+			<h4>用户登录</h4><br>
+		</div>
+		<div>
+			<hr>
+		</div>
+		<form action="file:///H:/eclipse_mars_workspace3/demo/WebContent/control.html" method="get">
+			<div class="userName">
+				<input type="text" placeholder="    账 号"  name="userName">
+				
+			</div>
+			<div class="passWord">
+				<input type="password" placeholder="    密 码" name="passWord">
+			</div>
+			<!-- <span class="submit">确认</span> -->
+			<input id="submit" type="submit" class="submit" value="登  录">
+		</form>
+	</div>
+
+</body>
+</html>

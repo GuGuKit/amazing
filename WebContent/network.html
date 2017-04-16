@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>惯导系统</title>
+<style type="text/css">
+body {
+	background-color:#668599;
+	margin: 0px;
+	font-size: 25%;
+}
+.box{
+	margin: 0 auto;width:1200px;background-color: white;
+	
+}
+.head{
+	height:60px;
+	background-color: white;
+	margin: 0px;
+	padding:0px;
+}
+.menu{
+	height:50px;
+	background-color: #54439B;
+	color:white;
+	padding:0px;
+}
+.logo{
+	margin-left:80px;
+	margin-top:5px;
+	width:50px;
+	float: left;
+}	
+.title{
+	padding:0px;
+	margin-left:50px;
+	margin-top:10px;
+	height:10px;	
+	width:600px;
+	float:left;
+	font-size:8em;
+	font-weight: bold;
+	color: #2C61B1;	
+}
+.option{
+	color:white;
+	float:none;
+	margin-left:30px;
+	text-decoration: none; 
+	font-size:5em;
+	position:relative;
+	top:12px;
+}
+.options{
+
+	width:8000px;
+	margin-left: 200px;
+}
+
+.clear{clear:both;}
+
+.footer{
+	height:40px;
+	width:100%;
+	background-color: #4876FF;
+	color:white;
+	font-size: 4em;
+	
+	
+	/* vertical-align: center; */
+}
+.footer p{
+
+
+	text-align: center;
+	line-height: 40px; 
+}
+
+.logo-center img{
+	margin:10px;
+	width:70px;
+	justify-content:center;
+}
+.logo-center{
+	text-align: center;
+}
+.line1{
+	display:flex;
+	flex-flow:row;
+	font-size:4em;
+	justify-content:center;
+	
+}
+.line1 hr{
+	height: 1px;
+	width:500px;
+	border: 1px #666699 solid ;
+	background-color:#666699;
+	margin:10px;
+	
+}
+
+.line2{
+	width:900px;
+	margin-left:150px;
+	margin-top:20px;
+	display: flex;
+	flex-flow:row;
+	/* justify-content:flex-start; */
+	justify-content：center;
+	
+	color: #4D61B3;
+	font-size: 4em;
+	
+}
+.line2 hr{
+
+	width:740px;
+	border: 2px #4D61B3 dashed ;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+.pin{
+	width:0;
+	height:0;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	border-top: 15px solid #4D61B3;
+	margin-top: 4px;
+	margin-left:20px;
+}
+.form{
+	width:900px;
+	margin-left:500px;
+	margin-top:20px;
+	
+	
+	color: #4D61B3;
+	font-size: 4em;
+}
+.item{
+	display: flex;
+	flex-flow:cloumn;
+	justify-content：center; 
+	margin: 20px;
+	
+}
+.form input{
+	border: 1px gray solid;
+	border-radius:3px;
+	width:120px;
+}
+.submit{
+	height:30px;
+	background-color: #445cbb;
+	margin-left:30px;
+	border: 1px red solid;
+	border-radius:3px;
+	color:white;
+}
+
+</style>
+
+</head>
+<body>
+	<div class="box">
+		<div class="head">
+			<img class="logo" alt="logo" src="logo.png">
+			<p class="title">
+				惯&nbsp;性&nbsp;导&nbsp;航&nbsp;系&nbsp;统&nbsp;HEU-407
+			</p>
+		</div>
+		<!-- 清除浮动 -->
+		<div class="clear"></div>
+		<div class="menu">
+			<div class="options">
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/control.html" >主控界面</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/init.html">初始化</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/io_set.html">输入/输出</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/network.html" style="color: #33CCCC">网络设置</a>
+				<a class="option" href="#">密码设置</a>
+				<a class="option" href="#">数据下载</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="logo-center">
+				<img  alt="logo" src="logo.png">
+			</div>
+			<div class="line1">
+				<hr>
+				<span>HEU-407</span>
+				<hr>
+			</div>
+			<div class="line2">
+				<div class="pin"></div><span>&nbsp;&nbsp;&nbsp;网络设置&nbsp;&nbsp;&nbsp;</span><hr>
+			</div>
+			<form action="#" class="form">
+				<div class="item">
+					<span>经度：</span><input type="text" name="jingdu"><span>°</span>
+				</div>
+				<div class="item">
+					<span>纬度：</span><input type="text" name="weidu"><span>°</span>
+				</div>	
+				<div class="item">
+					<span>高度：</span><input type="text" name="gaodu"><span>m</span>
+				</div>	
+				<div class="item">
+					<span>精度：</span>
+						<select>
+							<option>1</option>
+							<option>10</option>
+							<option>30</option>
+							<option>50</option>
+							<option>100</option>
+						</select>
+					<span>m</span>
+				</div>	
+				<div class="item">
+					<span>标签：</span><input type="text" name="label"><span></span>
+				</div>
+				<div class="item">
+					<input class="submit" type="submit" value="提交">
+				</div>
+			</form>
+			<div class="line2">
+				<div class="pin"></div><span>&nbsp;&nbsp;&nbsp;高级设置&nbsp;&nbsp;&nbsp;</span><hr>
+			</div>
+			<div class="form">
+					<span>强制手动设置：</span><label><input type="checkbox" name="check"></label>
+			</div>
+			<div class="form">
+					&nbsp;
+			</div>
+			
+
+
+		</div>
+		<div class="footer">
+			<p>Copyright © 2016-2017 by 哈工程自动化407教研室</p>
+		</div>
+	</div>
+</body>
+</html>

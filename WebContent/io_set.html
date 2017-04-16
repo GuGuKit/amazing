@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>惯导系统</title>
+<style type="text/css">
+body {
+	background-color:#668599;
+	margin: 0px;
+	font-size: 25%;
+}
+.box{
+	margin: 0 auto;width:1200px;background-color: white;
+	/* position:absolute; left:50%;bottom: 0px;top:0px; margin-left: -600px; */
+}
+.head{
+	height:60px;
+	background-color: white;
+	/* text-align:center; */
+	/* vertical-align: center; */
+	margin: 0px;
+	padding:0px;
+}
+.menu{
+	height:50px;
+	background-color: #54439B;
+	color:white;
+	padding:0px;
+}
+.logo{
+	margin-left:80px;
+	margin-top:5px;
+	width:50px;
+	float: left;
+
+
+}	
+.title{
+	padding:0px;
+	margin-left:50px;
+	margin-top:10px;
+	height:10px;	
+	width:600px;
+	float:left;
+	font-size:8em;
+	font-weight: bold;
+	color: #2C61B1;	
+}
+.option{
+	color:white;
+	float:none;
+	margin-left:30px;
+	text-decoration: none; 
+	font-size:5em;
+	position:relative;
+	top:12px;
+}
+.options{
+	width:8000px;
+	margin-left: 200px;
+
+}
+
+.clear{clear:both;}
+
+.footer{
+	height:40px;
+	width:100%;
+	background-color: #4876FF;
+	color:white;
+	font-size: 4em;
+}
+.footer p{
+
+
+	text-align: center;
+	line-height: 40px; 
+}
+.line{
+	margin-top:20px;
+	display: flex;
+	color: #4D61B3;
+	font-size: 4em;
+	
+}
+.line hr{
+	border: 1px #4D61B3 dashed ;
+	width:1165px;
+}
+.pin{
+	width:0;
+	height:0;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	border-top: 15px solid #4D61B3;
+	margin-top: 4px;
+	margin-left:20px;
+}
+.all-table{
+	display: flex;
+	flex-flow:row;
+	justify-content:space-around;
+	font-size:4em;
+	text-align: center;
+}
+
+table {
+ 	border-collapse:collapse;  
+/* 	border-collapse: separate;  */
+	empty-cells: hide;
+	width:400px;
+
+}
+table{
+	margin-top:15px;
+}
+table td,table th{
+	border: 1px #4D61B3 solid;
+}
+td{
+	padding:5px;
+}
+.input,.output{
+	width:1100px;
+	margin-left:100px;
+	font-size:4em;
+	color:#4D61B3;
+}
+select{
+	width:100px;
+}
+.item{
+	margin:10px;
+	display:flex;
+	justify-content:center;
+}
+.short-line{
+	width:1000px;
+
+	border: 0.5px #666699 solid ;
+	margin:10px;
+}
+.submit{
+	width:100px;
+	padding:4px;
+	margin-top:10px;
+	border:1px solid black;
+	border-radius:5px;
+	background-color: #445cbb;
+	color:white;
+	text-align:center;
+}
+ 
+</style>
+
+</head>
+<body>
+	<div class="box">
+		<div class="head">
+			<img class="logo" alt="logo" src="logo.png">
+			<p class="title">
+				惯&nbsp;性&nbsp;导&nbsp;航&nbsp;系&nbsp;统&nbsp;HEU-407
+			</p>
+		</div>
+		<!-- 清除浮动 -->
+		<div class="clear"></div>
+		<div class="menu">
+			<div class="options">
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/control.html" >主控界面</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/init.html">初始化</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/io_set.html" style="color: #33CCCC">输入/输出</a>
+				<a class="option" href="file:///H:/eclipse_mars_workspace3/demo/WebContent/network.html">网络设置</a>
+				<a class="option" href="#">密码设置</a>
+				<a class="option" href="#">数据下载</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="line">
+				<div class="pin"></div><span>&nbsp;&nbsp;&nbsp;输入/输出与外部传感器对应关系<span><hr>
+			</div>
+			<div class="all-table">
+				<table class="table-left">
+					<tr><td>&nbsp;</td><td>InputA</td><td>InputB</td><td>InputC</td></tr>
+					<tr><td>GPS1</td><td></td><td style="background-color: #6F918A;"></td><td></td></tr>
+					<tr><td>GPS2</td><td></td><td></td><td></td></tr>
+					<tr><td>DVL</td><td style="background-color: #6F918A;"></td><td></td><td></td></tr>
+					<tr><td>LBL</td><td></td><td></td><td></td></tr>
+					<tr><td>UTC</td><td></td><td></td><td></td></tr>
+					
+				</table>
+				<table class="table-right">
+					<tr><td></td><td>OutputA</td><td>OutputB</td><td>OutputC</td></tr>
+					<tr><td>GPS1</td><td></td><td></td><td></td></tr>
+					<tr><td>GPS2</td><td></td><td></td><td></td></tr>
+					<tr><td>DVL</td><td></td><td></td><td></td></tr>
+					<tr><td>LBL</td><td></td><td></td><td></td></tr>
+					<tr><td>UTC</td><td></td><td></td><td></td></tr>
+					
+				</table>
+			</div>
+			<div class="line">
+				<div class="pin"></div><span>&nbsp;&nbsp;&nbsp;输入设置<span><hr>
+			</div>
+			
+			<div class="input">
+				<span>接口选择：</span>
+				<div class="item">
+					<span>输入接口：</span>
+					<select>
+						<option>InputA</option>
+						<option>InputB</option>
+						<option>InputC</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>协议选择：</span>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;协议：</span>
+					<select>
+						<option>None</option>
+						<option>GPS</option>
+						<option>GAPS</option>
+						<option>DVL</option>
+						<option>LBL</option>
+						<option>UTC</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>物理连接选择：</span>
+				<div class="item">
+					<span>物理连接：</span>
+					<select>
+						<option>None</option>
+						<option>串口</option>
+						<option>网口</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>串口：</span>
+				<div class="item">
+					<span>奇偶校验：</span>
+					<select>
+						<option>None</option>
+						<option>奇校验</option>
+						<option>偶校验</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;停止位：</span>
+					<select>
+						<option>0.5</option>
+						<option>1.0</option>
+						<option>1.5</option>
+						<option>2.0</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>串口标准：</span>
+					<select>
+						<option>RS-232</option>
+						<option>RS-422</option>
+						<option>RS-485</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;数据位：</span>
+					<select>
+						<option>8</option>
+						<option>7</option>
+						<option>6</option>
+						<option>5</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;波特率：</span>
+					<select>
+						<option>1.2 kbauds</option>
+						<option>2.4 kbauds</option>
+						<option>4.8 kbauds</option>
+						<option>9.6 kbauds</option>
+						<option>19.2 kbauds</option>
+						<option>38.4 kbauds</option>
+						<option>57.6 kbauds</option>
+					</select>
+				</div>
+				<div class="item">
+					<span class="submit">提交</span>
+				</div>
+			</div>
+			<div class="line">
+				<div class="pin"></div><span>&nbsp;&nbsp;&nbsp;输出设置<span><hr>
+			</div>
+			<div class="output">
+				<span>接口选择：</span>
+				<div class="item">
+					<span>输出接口：</span>
+					<select>
+						<option>OutputA</option>
+						<option>OutputB</option>
+						<option>OutputC</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>协议选择：</span>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;协议：</span>
+					<select>
+						<option>None</option>
+						<option>GPS</option>
+						<option>GAPS</option>
+						<option>DVL</option>
+						<option>LBL</option>
+						<option>UTC</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杆臂：</span>
+					<select>
+						<option>None</option>
+						<option>主杆臂</option>
+						<option>二级杆臂A</option>
+						<option>二级杆臂B</option>
+						<option>二级杆臂C</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;频率：</span>
+					<select>
+						<option>None</option>
+						<option>200Hz</option>
+						<option>100Hz</option>
+						<option>50Hz</option>
+						<option>33.3Hz</option>
+						<option>25Hz</option>
+						<option>20Hz</option>
+						<option>10Hz</option>
+						<option>5Hz</option>
+						<option>2Hz</option>
+						<option>1Hz</option>
+						<option>0.5Hz</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>物理连接选择：</span>
+				<div class="item">
+					<span>物理连接：</span>
+					<select>
+						<option>None</option>
+						<option>串口</option>
+						<option>网口</option>
+					</select>
+				</div>
+				<hr class="short-line">
+				<span>串口：</span>
+				<div class="item">
+					<span>奇偶校验：</span>
+					<select>
+						<option>None</option>
+						<option>奇校验</option>
+						<option>偶校验</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;停止位：</span>
+					<select>
+						<option>0.5</option>
+						<option>1.0</option>
+						<option>1.5</option>
+						<option>2.0</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>串口标准：</span>
+					<select>
+						<option>RS-232</option>
+						<option>RS-422</option>
+						<option>RS-485</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;数据位：</span>
+					<select>
+						<option>8</option>
+						<option>7</option>
+						<option>6</option>
+						<option>5</option>
+					</select>
+				</div>
+				<div class="item">
+					<span>&nbsp;&nbsp;&nbsp;波特率：</span>
+					<select>
+						<option>1.2 kbauds</option>
+						<option>2.4 kbauds</option>
+						<option>4.8 kbauds</option>
+						<option>9.6 kbauds</option>
+						<option>19.2 kbauds</option>
+						<option>38.4 kbauds</option>
+						<option>57.6 kbauds</option>
+					</select>
+				</div>
+				<div class="item">
+					<span class="submit">提交</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Copyright © 2016-2017 by 哈工程自动化407教研室</p>
+		</div>
+	</div>
+</body>
+</html>
